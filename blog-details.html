@@ -68,16 +68,9 @@
             let postId = parseInt(urlParams.get('id'));
             let slug = urlParams.get('slug');
             
-            // Check for slug path: /blog/slug-name
-            if (!slug) {
-                const pathParts = window.location.pathname.split('/');
-                slug = pathParts.length > 2 && pathParts[1] === 'blog' ? pathParts[2] : null;
-            }
-
             let currentPost = null;
             if (slug) {
-                // If slug logic is not yet in store, we might need to fallback to ID or find by title/generated slug
-                // Assuming we will add slug to blog posts in store.js
+                // Find by slug or title match (for backward compatibility)
                 currentPost = blog.posts.find(p => (p.slug === slug) || (p.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === slug));
             } else if (postId) {
                 currentPost = blog.posts.find(p => p.id === postId);

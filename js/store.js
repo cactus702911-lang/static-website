@@ -405,6 +405,10 @@ function getContent() {
     if (stored) {
         try {
             const parsed = JSON.parse(stored);
+            // Check version to ensure schema compatibility
+            if (parsed.version !== 1) {
+                return defaultContent;
+            }
             // Check if it has 'state' (Zustand format) or just the object
             const content = parsed.state || parsed || defaultContent;
             siteContent = content; // Update global
@@ -425,7 +429,7 @@ function saveContent(newContent) {
     // Save locally for immediate feedback
     localStorage.setItem('portfolio-content-storage', JSON.stringify({ 
         state: newContent, 
-        version: 0 
+        version: 1 
     }));
     // Update the global object
     Object.assign(siteContent, newContent);
