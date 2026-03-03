@@ -1,9 +1,9 @@
 @echo off
 setlocal
-title RealShopUSA Automation System
+title BestPvaShop Automation System
 
 echo ===================================================
-echo      RealShopUSA - Automated Launch System
+echo      BestPvaShop - Automated Launch System
 echo ===================================================
 echo.
 
@@ -44,7 +44,7 @@ echo      Do NOT close that window while using the site.
 echo.
 
 :: Start node server in a new minimized window
-start "RealShopUSA Background Server" /min node server.cjs
+start "BestPvaShop Background Server" /min node server.cjs
 
 :: Wait 2 seconds for server to boot
 timeout /t 2 >nul

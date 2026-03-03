@@ -4,21 +4,21 @@
 const defaultContent = {
     notification: "🔥 Special Offer: Buy 100+ Gmail Accounts & Get 10% OFF! | 24/7 Support Available",
     header: {
-        logoText: "RealShopUSA",
+        logoText: "BestPvaShop",
         ctaButton: "Order Now",
         categories: ["Facebook", "Google", "Instagram", "Email", "Reviews", "Bank", "Social Media"]
     },
     contact: {
         title: "Contact Us",
         subtitle: "Have questions about our accounts? Reach out to us anytime.",
-        email: "support@realshopusa.com",
+        email: "support@bestpvashop.com",
         phone: "+1 (781) 281-8745",
         address: "339 1st Ave, New York, NY 10003, USA",
         locationSubtitle: "Available 24/7"
     },
     footer: {
         description: "We are provide all kinds of PVA Account & Reviews Service. Buy Facebook, Google, Instagram, and other verified accounts.",
-        copyright: "RealShopUSA. All rights reserved.",
+        copyright: "BestPvaShop. All rights reserved.",
         designedBy: "Trusted by 1000+ Clients"
     },
     home: {
@@ -58,7 +58,7 @@ const defaultContent = {
             }
         ],
         whyChoose: {
-            title: "Why Choose RealShopUSA?",
+            title: "Why Choose BestPvaShop?",
             subtitle: "We prioritize transparency and efficiency, delivering verified accounts promptly to meet your immediate financial needs.",
             image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             floatingImage: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
@@ -97,7 +97,7 @@ const defaultContent = {
         ctaButton: "Shop Now"
     },
     about: {
-        name: "RealShopUSA Team",
+        name: "BestPvaShop Team",
         role: "Premium Account Provider",
         description1: "We are a dedicated team providing high-quality Phone Verified Accounts (PVA) and social media services.",
         description2: "Our mission is to help businesses grow by providing reliable, verified accounts for marketing and outreach. We ensure all accounts are created with unique IPs and real phone numbers.",
@@ -364,14 +364,14 @@ const defaultContent = {
         ]
     },
     seo: {
-        siteTitle: "RealShopUSA | Buy Verified PVA Accounts",
+        siteTitle: "BestPvaShop | Buy Verified PVA Accounts",
         siteDescription: "Buy verified Facebook, Google, Instagram, and other PVA accounts at the best prices. 100% satisfaction guaranteed.",
         siteKeywords: "buy pva accounts, facebook accounts, google voice, gmail accounts, buy reviews",
         ogImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     social: {
-        whatsapp: "+17812818745",
-        telegram: "RealShopUSA",
+        whatsapp: "+15485801949",
+        telegram: "BestPvaShop",
         cvLink: "#",
         linkedin: "https://linkedin.com",
         github: "https://github.com",

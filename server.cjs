@@ -123,7 +123,7 @@ const server = http.createServer((req, res) => {
 });
 
 function generateSitemap(data) {
-    const baseUrl = "https://realshopusa.com";
+    const baseUrl = "https://bestpvashop.com";
     const date = new Date().toISOString().split('T')[0];
     
     let xml = `<?xml version="1.0" encoding="UTF-8"?>

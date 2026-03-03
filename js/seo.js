@@ -2,7 +2,7 @@
 const SEO = {
     updateMeta: (data) => {
         // Title
-        document.title = data.title || 'RealShopUSA | Buy Verified PVA Accounts';
+        document.title = data.title || 'BestPvaShop | Buy Verified PVA Accounts';
 
         // Meta Description
         let metaDesc = document.querySelector('meta[name="description"]');
@@ -69,7 +69,7 @@ const SEO = {
             "description": product.description,
             "brand": {
                 "@type": "Brand",
-                "name": "RealShopUSA"
+                "name": "BestPvaShop"
             },
             "sku": product.id,
             "offers": {
@@ -92,9 +92,9 @@ const SEO = {
         return {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "RealShopUSA",
-            "url": "https://realshopusa.com",
-            "logo": "https://realshopusa.com/logo.png",
+            "name": "BestPvaShop",
+            "url": "https://bestpvashop.com",
+            "logo": "https://bestpvashop.com/logo.png",
             "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-781-281-8745",
