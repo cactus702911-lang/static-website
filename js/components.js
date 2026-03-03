@@ -19,7 +19,7 @@ function loadSharedComponents() {
         <div class="container mx-auto px-4 md:px-6">
             <div class="flex h-16 items-center justify-between">
                 <!-- Logo -->
-                <a href="/" class="flex items-center gap-2">
+                <a href="index.html" class="flex items-center gap-2">
                     <div class="bg-blue-600/10 p-2 rounded-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag text-blue-600"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                     </div>
@@ -30,8 +30,8 @@ function loadSharedComponents() {
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="/" id="nav-home" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Home</a>
-                    <a href="/shop" id="nav-shop" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Shop</a>
+                    <a href="index.html" id="nav-home" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="shop.html" id="nav-shop" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Shop</a>
                     
                     <!-- Categories Dropdown -->
                     <div class="relative group">
@@ -44,12 +44,12 @@ function loadSharedComponents() {
                         </div>
                     </div>
 
-                    <a href="/services" id="nav-services" class="text-sm text-gray-600 hover:text-blue-600 font-medium transition-colors">Services</a>
-                    <a href="/about" id="nav-about" class="text-sm text-gray-600 hover:text-blue-600 font-medium transition-colors">About</a>
-                    <a href="/blog" id="nav-blog" class="text-sm text-gray-600 hover:text-blue-600 font-medium transition-colors">Blog</a>
-                    <a href="/contact" id="nav-contact" class="text-sm text-gray-600 hover:text-blue-600 font-medium transition-colors">Contact</a>
+                    <a href="services.html" id="nav-services" class="text-sm text-gray-600 hover:text-blue-600 font-medium transition-colors">Services</a>
+                    <a href="about.html" id="nav-about" class="text-sm text-gray-600 hover:text-blue-600 font-medium transition-colors">About</a>
+                    <a href="blog.html" id="nav-blog" class="text-sm text-gray-600 hover:text-blue-600 font-medium transition-colors">Blog</a>
+                    <a href="contact.html" id="nav-contact" class="text-sm text-gray-600 hover:text-blue-600 font-medium transition-colors">Contact</a>
 
-                    <a href="/contact" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5" id="cta-button">
+                    <a href="contact.html" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5" id="cta-button">
                         Order Now
                     </a>
                 </nav>
@@ -65,8 +65,8 @@ function loadSharedComponents() {
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-100 shadow-xl max-h-[85vh] overflow-y-auto z-40">
             <div class="container mx-auto px-4 py-6 flex flex-col gap-4">
-                <a href="/" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Home</a>
-                <a href="/shop" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Shop</a>
+                <a href="index.html" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Home</a>
+                <a href="shop.html" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Shop</a>
                 
                 <div class="border-b border-slate-50 pb-2">
                     <button onclick="toggleCategory()" class="flex items-center justify-between w-full text-lg py-3 text-slate-700 font-medium hover:text-blue-600 transition-colors">
@@ -75,13 +75,13 @@ function loadSharedComponents() {
                     <div id="mobile-categories" class="hidden pl-4 flex-col gap-2 mt-2 bg-slate-50 rounded-lg p-3"></div>
                 </div>
 
-                <a href="/services" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Services</a>
-                <a href="/about" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">About</a>
-                <a href="/blog" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Blog</a>
-                <a href="/contact" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Contact</a>
+                <a href="services.html" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Services</a>
+                <a href="about.html" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">About</a>
+                <a href="blog.html" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Blog</a>
+                <a href="contact.html" class="text-lg py-3 text-slate-700 font-medium border-b border-slate-50 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Contact</a>
                 
                 <div class="pt-4">
-                    <a href="/contact" class="block w-full bg-blue-600 text-white text-center px-6 py-4 rounded-xl text-lg font-bold hover:bg-blue-700 transition-all shadow-lg active:scale-95" id="mobile-cta-button">Order Now</a>
+                    <a href="contact.html" class="block w-full bg-blue-600 text-white text-center px-6 py-4 rounded-xl text-lg font-bold hover:bg-blue-700 transition-all shadow-lg active:scale-95" id="mobile-cta-button">Order Now</a>
                 </div>
             </div>
         </div>
@@ -196,14 +196,19 @@ function loadSharedComponents() {
     const navIdMap = {
         'index.html': 'nav-home',
         '/': 'nav-home',
+        'shop.html': 'nav-shop',
         'shop': 'nav-shop', 
         '/shop': 'nav-shop', 
+        'services.html': 'nav-services',
         'services': 'nav-services',
         '/services': 'nav-services',
+        'about.html': 'nav-about',
         'about': 'nav-about',
         '/about': 'nav-about',
+        'blog.html': 'nav-blog',
         'blog': 'nav-blog',
         '/blog': 'nav-blog',
+        'contact.html': 'nav-contact',
         'contact': 'nav-contact',
         '/contact': 'nav-contact'
     };

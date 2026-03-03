@@ -34,7 +34,7 @@
     <script>
         function getBlogLink(post) {
             const slug = post.slug || post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-            return `/blog/${slug}`;
+            return `blog-details.html?slug=${slug}`;
         }
 
         function renderPage() {

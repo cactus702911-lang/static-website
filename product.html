@@ -148,10 +148,13 @@
             // Handle ID or Slug
             const urlParams = new URLSearchParams(window.location.search);
             let productId = parseInt(urlParams.get('id'));
+            let slug = urlParams.get('slug');
             
             // Check for slug path: /product/slug-name
-            const pathParts = window.location.pathname.split('/');
-            const slug = pathParts.length > 2 && pathParts[1] === 'product' ? pathParts[2] : null;
+            if (!slug) {
+                const pathParts = window.location.pathname.split('/');
+                slug = pathParts.length > 2 && pathParts[1] === 'product' ? pathParts[2] : null;
+            }
 
             if (slug) {
                 currentProduct = content.caseStudies.studies.find(p => p.slug === slug);

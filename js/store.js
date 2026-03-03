@@ -461,5 +461,5 @@ function getIcon(name, className = "w-6 h-6") {
 function getProductLink(product) {
     if (!product) return '#';
     const slug = product.slug || product.id;
-    return `product/${slug}`;
+    return `product.html?slug=${slug}`;
 }

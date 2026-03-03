@@ -2,7 +2,7 @@
 
 // Auth Check
 if (!localStorage.getItem('isAuthenticated')) {
-    window.location.href = 'login';
+    window.location.href = 'login.html';
 }
 
 let content = siteContent; // from store.js
@@ -46,7 +46,7 @@ function switchTab(tabName) {
 
 function logout() {
     localStorage.removeItem('isAuthenticated');
-    window.location.href = 'login';
+    window.location.href = 'login.html';
 }
 
 // File Upload Helper
