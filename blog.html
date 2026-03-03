@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | RealShopUSA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+    
+    <!-- Header injected via js/components.js -->
+
+    <main class="flex-grow pt-20 pb-24" id="main-content">
+        <div class="container mx-auto px-4 md:px-6">
+            <div id="blog-list-view">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6" id="page-title">Latest News</h1>
+                    <p class="text-xl text-slate-600 leading-relaxed" id="page-subtitle">Updates and tips.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+                    <!-- Posts loaded via JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer injected via js/components.js -->
+
+    <script src="js/store.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        function getBlogLink(post) {
+            const slug = post.slug || post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            return `/blog/${slug}`;
+        }
+
+        function renderPage() {
+            const content = siteContent;
+            const blog = content.blog;
+
+            // Blog Content
+            document.getElementById('page-title').textContent = blog.title;
+            document.getElementById('page-subtitle').textContent = blog.subtitle;
+
+            const blogGrid = document.getElementById('blog-grid');
+            blogGrid.innerHTML = '';
+            
+            if (blog.posts.length === 0) {
+                blogGrid.innerHTML = `<div class="col-span-full text-center py-20 text-slate-500">No posts available.</div>`;
+            } else {
+                blog.posts.forEach(post => {
+                    const div = document.createElement('article');
+                    div.className = "bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer flex flex-col h-full";
+                    div.onclick = () => window.location.href = getBlogLink(post);
+                    
+                    div.innerHTML = `
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="${post.image || 'https://via.placeholder.com/400x300?text=No+Image'}" alt="${post.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-white/90 backdrop-blur-sm text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+                                    ${post.category}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center gap-4 text-xs text-slate-500 mb-3">
+                                <div class="flex items-center gap-1">
+                                    <span>📅</span> ${post.date}
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span>👤</span> ${post.author}
+                                </div>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                                ${post.title}
+                            </h2>
+                            <p class="text-slate-600 text-sm mb-4 line-clamp-3 flex-grow">
+                                ${post.excerpt}
+                            </p>
+                            <div class="mt-auto pt-4 border-t border-slate-100 flex items-center text-blue-600 font-medium text-sm group-hover:translate-x-1 transition-transform">
+                                Read Article <span class="ml-1">→</span>
+                            </div>
+                        </div>
+                    `;
+                    blogGrid.appendChild(div);
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', renderPage);
+        window.addEventListener('contentUpdated', renderPage);
+    </script>
+</body>
+</html>

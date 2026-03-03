@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | RealShopUSA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+    
+    <!-- Header injected via js/components.js -->
+
+    <main class="flex-grow pt-20">
+        <section class="bg-slate-900 text-white py-20">
+            <div class="container mx-auto px-4 md:px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" id="page-title">Contact Us</h1>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto" id="page-subtitle">Have questions? Reach out anytime.</p>
+            </div>
+        </section>
+
+        <section class="py-20 relative">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <!-- Contact Info -->
+                    <div class="lg:w-1/3 bg-blue-600 text-white p-10 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-8">Get in Touch</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-blue-100 text-sm mb-1">Support Email</p>
+                                        <p class="font-medium break-all" id="contact-email">support@realshopusa.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-blue-100 text-sm mb-1">WhatsApp / Telegram</p>
+                                        <p class="font-medium" id="contact-phone">+1 (781) 281-8745</p>
+                                        <p class="font-medium">@RealShopUSA</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-blue-100 text-sm mb-1">Working Hours</p>
+                                        <p class="font-medium">24/7 Live Support</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                                <h4 class="font-bold mb-2">Need Faster Reply?</h4>
+                                <p class="text-sm text-blue-100 mb-4">Contact us directly on WhatsApp or Telegram for instant order updates.</p>
+                                <div class="space-y-3">
+                                    <button onclick="handleWhatsAppSubmit()" class="block bg-white text-blue-600 text-center w-full py-2 rounded-lg font-bold hover:bg-blue-50 transition-colors">Chat on WhatsApp</button>
+                                    <button onclick="handleTelegramSubmit()" class="block bg-blue-500 text-white text-center w-full py-2 rounded-lg font-bold hover:bg-blue-400 transition-colors">Chat on Telegram</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="lg:w-2/3 p-10">
+                        <div id="success-message" class="hidden h-full flex flex-col items-center justify-center text-center p-8 animate-in fade-in">
+                            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">Request Sent!</h3>
+                            <p class="text-slate-600">Our support team will contact you shortly.</p>
+                            <button 
+                                onclick="resetForm()"
+                                class="mt-8 text-blue-600 font-medium hover:underline"
+                            >
+                                Send another request
+                            </button>
+                        </div>
+
+                        <form id="contact-form" onsubmit="handleSubmit(event)" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
+                                    <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="Your Name">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+                                    <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-2">Account Type</label>
+                                    <select name="service" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white">
+                                        <option>Facebook Accounts</option>
+                                        <option>Google/Gmail Accounts</option>
+                                        <option>Instagram Accounts</option>
+                                        <option>Google Voice</option>
+                                        <option>Reviews (Google/Trustpilot)</option>
+                                        <option>Other Service</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-2">Quantity Needed</label>
+                                    <input type="text" name="quantity" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="e.g. 50">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">Order ID (If reporting issue)</label>
+                                <input type="text" name="orderId" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="e.g. #ORD-12345">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">Requirements / Issue Details</label>
+                                <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all resize-none" placeholder="Please specify country, age, or format requirements..."></textarea>
+                            </div>
+
+                            <div class="flex gap-4 pt-4">
+                                <button type="button" onclick="handleWhatsAppSubmit()" class="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-lg transition-all shadow-lg hover:shadow-green-500/25 flex items-center justify-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Submit via WhatsApp
+                                </button>
+                                <button type="button" onclick="handleTelegramSubmit()" class="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-lg transition-all shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> Submit via Telegram
+                                </button>
+                            </div>
+                            
+                            <div class="relative flex py-2 items-center">
+                                <div class="flex-grow border-t border-slate-200"></div>
+                                <span class="flex-shrink-0 mx-4 text-slate-400 text-sm">Or send via email</span>
+                                <div class="flex-grow border-t border-slate-200"></div>
+                            </div>
+
+                            <button type="submit" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 rounded-lg transition-all shadow-lg hover:shadow-slate-500/25 flex items-center justify-center gap-2">
+                                Submit via Email <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer injected via js/components.js -->
+
+    <script src="js/store.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        function renderPage() {
+            const content = siteContent;
+
+            // Contact Content
+            document.getElementById('page-title').textContent = content.contact.title;
+            document.getElementById('page-subtitle').textContent = content.contact.subtitle;
+            document.getElementById('contact-email').textContent = content.contact.email;
+            document.getElementById('contact-phone').textContent = content.contact.phone;
+        }
+
+        function getFormData() {
+            const form = document.getElementById('contact-form');
+            const formData = new FormData(form);
+            return Object.fromEntries(formData);
+        }
+
+        function handleWhatsAppSubmit() {
+            const data = getFormData();
+            const text = `Hello, I would like to order:
+            
+Name: ${data.name || ''}
+Service: ${data.service || 'Facebook Accounts'}
+Quantity: ${data.quantity || ''}
+Details: ${data.message || ''}
+Order ID: ${data.orderId || 'N/A'}`;
+
+            const encodedText = encodeURIComponent(text);
+            const waNumber = siteContent.social.whatsapp.replace(/\+/g, '');
+            window.open(`https://wa.me/${waNumber}?text=${encodedText}`, '_blank');
+        }
+
+        function handleTelegramSubmit() {
+            const telegramUser = siteContent.social.telegram;
+            window.open(`https://t.me/${telegramUser}`, '_blank');
+        }
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            const data = getFormData();
+            
+            const subject = `New Order Request: ${data.service}`;
+            const body = `Name: ${data.name}
+Email: ${data.email}
+Service: ${data.service}
+Quantity: ${data.quantity}
+Order ID: ${data.orderId || 'N/A'}
+
+Details:
+${data.message}`;
+            
+            window.location.href = `mailto:${siteContent.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Show success message
+            document.getElementById('contact-form').classList.add('hidden');
+            document.getElementById('success-message').classList.remove('hidden');
+            document.getElementById('success-message').classList.add('flex');
+            
+            // Reset after 5 seconds
+            setTimeout(resetForm, 5000);
+        }
+
+        function resetForm() {
+            document.getElementById('contact-form').reset();
+            document.getElementById('contact-form').classList.remove('hidden');
+            document.getElementById('success-message').classList.add('hidden');
+            document.getElementById('success-message').classList.remove('flex');
+        }
+
+        document.addEventListener('DOMContentLoaded', renderPage);
+        window.addEventListener('contentUpdated', renderPage);
+    </script>
+</body>
+</html>
