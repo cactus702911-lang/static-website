@@ -93,7 +93,7 @@ function loadSharedComponents() {
         <div class="container mx-auto px-4 md:px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div class="space-y-4">
-                    <a href="/" class="flex items-center gap-2 mb-4">
+                    <a href="index.html" class="flex items-center gap-2 mb-4">
                         <div class="bg-blue-600 p-2 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag text-white"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                         </div>
@@ -118,10 +118,10 @@ function loadSharedComponents() {
                 <div>
                     <h3 class="text-lg font-bold mb-6 text-white">Quick Links</h3>
                     <ul class="space-y-3 text-slate-400 text-sm">
-                        <li><a href="/shop" class="hover:text-blue-400 transition-colors">All Products</a></li>
-                        <li><a href="/about" class="hover:text-blue-400 transition-colors">About Company</a></li>
-                        <li><a href="/contact" class="hover:text-blue-400 transition-colors">Contact Support</a></li>
-                        <li><a href="/blog" class="hover:text-blue-400 transition-colors">Latest News</a></li>
+                        <li><a href="shop.html" class="hover:text-blue-400 transition-colors">All Products</a></li>
+                        <li><a href="about.html" class="hover:text-blue-400 transition-colors">About Company</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400 transition-colors">Contact Support</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-400 transition-colors">Latest News</a></li>
                     </ul>
                 </div>
                 <div>

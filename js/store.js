@@ -352,6 +352,7 @@ const defaultContent = {
         posts: [
             {
                 id: 1,
+                slug: "how-to-keep-your-accounts-safe",
                 title: "How to Keep Your Accounts Safe",
                 excerpt: "Tips to prevent your purchased accounts from getting locked.",
                 content: "Always use clean IPs and avoid logging in from multiple locations simultaneously...",
